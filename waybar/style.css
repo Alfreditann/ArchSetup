@@ -81,7 +81,7 @@ tooltip label {
    =============================== */
 #user,
 #temperature,
-#cpu,
+#custom-memory,
 #battery,
 #pulseaudio,
 #network,
@@ -100,6 +100,18 @@ tooltip label {
 
 #custom-notification {
     margin: 0 10px 0 5px;
+}
+
+/* ===============================
+   VOLUME MODULE
+   =============================== */
+#custom-volume {
+    background-color: #070707;  /* match other modules */
+    color: #7f1d1d;
+    padding: 0 15px;
+    margin: 0 5px;
+    border-radius: 50px;
+    font-weight: bold;
 }
 
 /* ===============================
