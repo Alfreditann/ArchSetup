@@ -6,10 +6,9 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "user"
     ],
     "modules-right": [
-        "custom/volume",
+        "pulseaudio",
         "network",
         "battery",
         "custom/memory",
@@ -66,16 +65,33 @@
         },
         "events": {
             "on-discharging-warning": "notify-send -u normal 'Low Battery'",
-            "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
-            "on-charging-100": "notify-send -u normal 'Battery Full!'"
+            "on-discharging-critical": "notify-send -u critical 'Very Low Battery'"
         }
     },
-    "custom/volume": {
-        "exec": "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{if ($3 == \"[MUTED]\") printf \"Muted \"; else printf \"%d%% \", $2*100}'",
-        "interval": 1,
-        "tooltip": true,
-        "on-click": "kitty -e wiremix",
-        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 1,
+        "on-click": "kitty -e wiremix & sleep 0.2 && hyprctl dispatch",
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ]
     },
     "custom/notification": {
         "tooltip": true,
