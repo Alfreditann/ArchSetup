@@ -34,7 +34,6 @@
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50
     },
     "custom/memory": {
         "exec": "free -h | awk '/Mem:/ {printf \"%s/%s (%.0f%%) 󰍛\", $3, $2, $3/$2*100}'",
@@ -58,7 +57,6 @@
             "",
             ""
         ],
-        "max-length": 25,
         "states": {
             "warning": 30,
             "critical": 15
