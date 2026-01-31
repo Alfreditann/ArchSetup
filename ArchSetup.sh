@@ -47,6 +47,6 @@ fc-cache -rv
 
  
 swww-daemon >/dev/null 2>&1 &
-swww img ~/Documents/ArchSetup/wallpaper/wallpaper4.jpg
+swww img ~/Documents/ArchSetup/wallpaper/wallpaper4.png
 
 
