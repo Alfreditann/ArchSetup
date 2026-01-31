@@ -22,8 +22,6 @@ fi
 
 mkdir -p ~/Documents
 cd ~/Documents
-mkdir -p /GitHub
-cd /GitHub
 
 git clone https://github.com/alfreditann/ArchSetup.git
 
@@ -34,7 +32,7 @@ cp hyprland.conf hyprlock.conf hypridle.conf ~/.config/hypr/
 
 mkdir -p ~/.config/kitty
 cp terminal/kitty.conf ~/.config/kitty/
-~/Documents/GitHub/ArchSetup/scripts/launch.sh
+~/Documents/ArchSetup/scripts/launch.sh
 cd ~
 
 
@@ -49,7 +47,6 @@ fc-cache -rv
 
 
 swww-daemon >/dev/null 2>&1 &
-swww img ~/Documents/GitHub/ArchSetup/wallpapers/wallpaper4.jpg
+swww img ~/Documents/ArchSetup/wallpapers/wallpaper4.jpg
 
-bash ~/Documents/GitHub/ArchSetup/scripts/launch.sh
 
