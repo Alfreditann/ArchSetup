@@ -45,7 +45,7 @@ sudo pacman -Suy --noconfirm\
 
 fc-cache -rv
 
-
+ 
 swww-daemon >/dev/null 2>&1 &
 swww img ~/Documents/ArchSetup/wallpapers/wallpaper4.jpg
 
