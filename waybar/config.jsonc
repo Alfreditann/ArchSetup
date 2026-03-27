@@ -6,6 +6,7 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
+        "tray"
     ],
     "modules-right": [
         "pulseaudio",
