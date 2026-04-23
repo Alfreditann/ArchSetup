@@ -20,7 +20,7 @@
         "interval": 1,
         "tooltip": true,
         "format": "{:%H:%M:%S} ",
-        "tooltip-format": "{:%Y-%m-%d}"
+        "tooltip-format":"{:%Y-%m-%d}"
     },
     "hyprland/workspaces": {
         "format": "{name}"
@@ -34,7 +34,7 @@
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format-ethernet": "{ifname} ",
-        "tooltip-format-disconnected": "Disconnected",
+        "tooltip-format-disconnected": "Disconnected"
     },
     "custom/memory": {
         "exec": "free -h | awk '/Mem:/ {printf \"%s/%s (%.0f%%) 󰍛\", $3, $2, $3/$2*100}'",
