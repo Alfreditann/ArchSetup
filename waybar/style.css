@@ -1,15 +1,13 @@
 /* ===============================
-   DARK RED WAYBAR THEME
-   (NO COLOR VARIABLES)
+   SOFT CRIMSON GLASS WAYBAR
+   Rounded, lighter, wallpaper-friendly red palette
    =============================== */
 
 * {
     border: none;
-    border-radius: 0px;
-
     font-family: "Adwaita Sans", "GeistMonoNerd Nerd Font Propo", "sans-serif";
-    font-weight: bold;
-
+    font-weight: 700;
+    font-size: 13px;
     min-height: 0;
     padding: 0;
     margin: 0;
@@ -17,101 +15,129 @@
 
 window#waybar {
     background: transparent;
+    color: #ffdddd;
+}
+
+/* Soft grouped islands, less rigid than box panels. */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin-top: 8px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(14, 14, 14, 0.72), rgba(8, 8, 8, 0.86));
+    border: 1px solid rgba(122, 17, 17, 0.45);
+    box-shadow: 0 8px 18px rgba(8, 8, 8, 0.38), 0 0 0 1px rgba(255, 42, 42, 0.08) inset;
+}
+
+.modules-left {
+    margin-left: 14px;
+}
+
+.modules-center {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.modules-right {
+    margin-right: 14px;
 }
 
 /* ===============================
    TOOLTIPS
    =============================== */
 tooltip {
-    background: #070707;
-    border: 2px solid #a4161a;
+    background: rgba(8, 8, 8, 0.92);
+    border: 1px solid #7a1111;
     border-radius: 12px;
 }
 
 tooltip label {
-    color: #7f1d1d;
-    padding: 6px;
+    color: #ffdddd;
+    padding: 7px;
 }
 
 /* ===============================
    WORKSPACES
    =============================== */
 #workspaces {
-    background-color: #070707;
-    padding: 5px 3px;
-    margin: 0 0 0 12px;
-    border-radius: 18px;
+    background: transparent;
+    margin: 0 0 0 4px;
+    padding: 0;
 }
 
 #workspaces button {
-    padding: 0px 6px;
-    margin: 0px 3px;
-    border-radius: 50px;
-
-    background-color: #2a0606;
-    color: #7f1d1d;
-
-    transition: all 0.3s ease-in-out;
-}
-
-#workspaces button.active {
-    background-color: #a4161a;
-    color: #2b0505;
-    min-width: 50px;
-    font-size: 13px;
+    margin: 0 3px;
+    padding: 2px 11px;
+    min-width: 30px;
+    border-radius: 999px;
+    color: #ffdddd;
+    background: rgba(58, 10, 10, 0.55);
+    border: 1px solid rgba(122, 17, 17, 0.55);
+    transition: all 0.25s ease;
 }
 
 #workspaces button:hover {
-    background-color: #5c0d0d;
-    color: #7f1d1d;
-    border-radius: 16px;
-    min-width: 50px;
+    background: rgba(122, 17, 17, 0.62);
+    border-color: #ff2a2a;
+}
+
+#workspaces button.active {
+    background: linear-gradient(180deg, #d62828, #a4161a);
+    color: #080808;
+    border: 1px solid #ff2a2a;
+    box-shadow: 0 0 0 1px rgba(255, 221, 221, 0.18) inset;
 }
 
 #workspaces button.urgent {
-    background-color: #d62828;
-    color: #2b0505;
-    border-radius: 16px;
-    min-width: 50px;
-    animation: pulse 1.2s infinite ease-in-out;
+    background: #ff2a2a;
+    color: #080808;
+    border: 1px solid #ff2a2a;
+    animation: pulse 1s infinite ease-in-out;
 }
 
 /* ===============================
    MODULES
    =============================== */
-#user,
+#tray,
 #temperature,
 #custom-memory,
 #battery,
 #pulseaudio,
 #network,
 #clock,
-#custom-notification {
-    background-color: #070707;
-    padding: 0 15px;
-    margin: 0 5px;
-    border-radius: 50px;
-    color: #7f1d1d;
+#custom-notification,
+#custom-volume {
+    margin: 0 3px;
+    padding: 3px 13px;
+    border-radius: 999px;
+    color: #ffdddd;
+    background: linear-gradient(180deg, rgba(58, 10, 10, 0.48), rgba(14, 14, 14, 0.7));
+    border: 1px solid rgba(122, 17, 17, 0.55);
 }
 
 #clock {
-    margin: 0 5px 0 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: linear-gradient(180deg, rgba(164, 22, 26, 0.48), rgba(58, 10, 10, 0.7));
+    border-color: rgba(255, 42, 42, 0.6);
+}
+
+#tray {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #custom-notification {
-    margin: 0 10px 0 5px;
+    margin-right: 6px;
 }
 
-/* ===============================
-   VOLUME MODULE
-   =============================== */
-#custom-volume {
-    background-color: #070707;  /* match other modules */
-    color: #7f1d1d;
-    padding: 0 15px;
-    margin: 0 5px;
-    border-radius: 50px;
-    font-weight: bold;
+#battery.warning,
+#temperature.critical,
+#network.disconnected,
+#pulseaudio.muted {
+    border-color: #d62828;
+    background: linear-gradient(180deg, rgba(122, 17, 17, 0.7), rgba(58, 10, 10, 0.82));
 }
 
 /* ===============================
@@ -119,12 +145,12 @@ tooltip label {
    =============================== */
 @keyframes pulse {
     0% {
-        background-color: #a4161a;
+        box-shadow: 0 0 0 0 rgba(255, 42, 42, 0.35);
     }
-    50% {
-        background-color: #d62828;
+    70% {
+        box-shadow: 0 0 0 7px rgba(255, 42, 42, 0);
     }
     100% {
-        background-color: #a4161a;
+        box-shadow: 0 0 0 0 rgba(255, 42, 42, 0);
     }
 }

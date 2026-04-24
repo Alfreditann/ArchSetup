@@ -32,6 +32,10 @@ cp hyprland.conf hyprlock.conf hypridle.conf ~/.config/hypr/
 
 mkdir -p ~/.config/kitty
 cp terminal/kitty.conf ~/.config/kitty/
+
+mkdir -p ~/.config/fastfetch
+cp ~/Documents/ArchSetup/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
+
 ~/Documents/ArchSetup/scripts/launch.sh
 cd ~
 
