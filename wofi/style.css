@@ -1,0 +1,67 @@
+/* Purple-forward dark theme with soft lavender contrast */
+window {
+    margin: 0px;
+    border: 1px solid #7c3aed;
+    border-radius: 16px;
+    background-color: #1b1028;
+    color: #f5eeff;
+    font-family: "Adwaita Sans", "GeistMonoNerd Nerd Font Propo", sans-serif;
+}
+
+#input {
+    margin: 12px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 12px;
+    background-color: #130c1d; /* deep purple base */
+    color: #f5eeff;
+}
+
+#inner-box {
+    margin: 0 12px 12px 12px;
+    padding: 6px;
+    border: none;
+}
+
+#outer-box {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0;
+    border: none;
+}
+
+#entry {
+    padding: 10px 12px;
+    margin: 3px 0;
+    border-radius: 10px;
+    background-color: #26163a; /* secondary panel tone */
+    color: #eadcff;
+}
+
+#entry:selected {
+    background: linear-gradient(90deg, #7c3aed 0%, #c084fc 100%); /* primary highlight */
+    color: #ffffff;
+}
+
+#text {
+    margin-left: 10px;
+}
+
+#img {
+    margin-right: 10px;
+}
+
+#entry:hover {
+    background-color: #5b21b6;
+    color: #f5eeff;
+}
+
+#input:focus {
+    border: none;
+    box-shadow: none;
+}
