@@ -1,9 +1,9 @@
-@define-color black        #080808;
-@define-color dark-black   #0e0e0e;
+@define-color black        #050b14;
+@define-color dark-black   #0a1526;
 
 @define-color dark-red     #3a0a0a;
-@define-color red         #7a1111;
-@define-color bright-red  #d62828;
-@define-color neon-red    #ff2a2a;
+@define-color red         #d62828;
+@define-color bright-red  #ff4d4d;
+@define-color neon-red    #2a6fdb;
 
-@define-color fg          #ffdddd;
+@define-color fg          #dfeaff;

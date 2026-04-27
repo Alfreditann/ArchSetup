@@ -1,7 +1,7 @@
 /* ===============================
-   DARK RED WAYBAR THEME
-   (NO COLOR VARIABLES)
-   =============================== */
+    RED AND BLUE WAYBAR THEME
+    (NO COLOR VARIABLES)
+    =============================== */
 
 * {
     border: none;
@@ -23,13 +23,13 @@ window#waybar {
    TOOLTIPS
    =============================== */
 tooltip {
-    background: #070707;
-    border: 2px solid #a4161a;
+    background: #050b14;
+    border: 2px solid #7c3aed;
     border-radius: 12px;
 }
 
 tooltip label {
-    color: #7f1d1d;
+    color: #8fb3ff;
     padding: 6px;
 }
 
@@ -37,7 +37,7 @@ tooltip label {
    WORKSPACES
    =============================== */
 #workspaces {
-    background-color: #070707;
+    background-color: #050b14;
     padding: 5px 3px;
     margin: 0 0 0 12px;
     border-radius: 18px;
@@ -48,29 +48,29 @@ tooltip label {
     margin: 0px 3px;
     border-radius: 50px;
 
-    background-color: #2a0606;
-    color: #7f1d1d;
+    background-color: #0c1f3d;
+    color: #8fb3ff;
 
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-    background-color: #a4161a;
-    color: #2b0505;
+    background: linear-gradient(90deg, #1f4f8f 0%, #7c3aed 100%);
+    color: #eef4ff;
     min-width: 50px;
     font-size: 13px;
 }
 
 #workspaces button:hover {
-    background-color: #5c0d0d;
-    color: #7f1d1d;
+    background-color: #d62828;
+    color: #eef4ff;
     border-radius: 16px;
     min-width: 50px;
 }
 
 #workspaces button.urgent {
-    background-color: #d62828;
-    color: #2b0505;
+    background-color: #ff4d4d;
+    color: #050b14;
     border-radius: 16px;
     min-width: 50px;
     animation: pulse 1.2s infinite ease-in-out;
@@ -87,11 +87,11 @@ tooltip label {
 #network,
 #clock,
 #custom-notification {
-    background-color: #070707;
+    background-color: #050b14;
     padding: 0 15px;
     margin: 0 5px;
     border-radius: 50px;
-    color: #7f1d1d;
+    color: #8fb3ff;
 }
 
 #clock {
@@ -100,14 +100,15 @@ tooltip label {
 
 #custom-notification {
     margin: 0 10px 0 5px;
+    color: #ff4d4d;
 }
 
 /* ===============================
    VOLUME MODULE
    =============================== */
 #custom-volume {
-    background-color: #070707;  /* match other modules */
-    color: #7f1d1d;
+    background-color: #050b14;  /* match other modules */
+    color: #8fb3ff;
     padding: 0 15px;
     margin: 0 5px;
     border-radius: 50px;
@@ -119,12 +120,12 @@ tooltip label {
    =============================== */
 @keyframes pulse {
     0% {
-        background-color: #a4161a;
-    }
-    50% {
         background-color: #d62828;
     }
+    50% {
+        background-color: #2a6fdb;
+    }
     100% {
-        background-color: #a4161a;
+        background-color: #d62828;
     }
 }

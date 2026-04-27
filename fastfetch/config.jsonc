@@ -1,0 +1,232 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "Arch",
+    "color": {
+      "1": "38;2;224;107;116",
+      "2": "blue"
+    },
+    "padding": {
+      "top": 1,
+      "left": 2,
+      "right": 4
+    }
+  },
+  "display": {
+    "separator": "  ",
+    "color": {
+      "separator": "38;2;95;135;135"
+    }
+  },
+  "modules": [
+    "break",
+
+    {
+      "type": "custom",
+      "format": "╭─── SYSTEM",
+      "outputColor": "38;2;95;135;135"
+    },
+    {
+      "type": "title",
+      "key": "│ USER",
+      "format": "{user-name}@{host-name}",
+      "keyColor": "38;2;0;215;135"
+      
+    },
+    {
+      "type": "os",
+      "key": "│ OS",
+      "keyColor": "38;2;0;215;135"
+    },
+    {
+      "type": "command",
+      "key": "│ OS Age",
+      "keyColor": "38;2;0;215;135",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); Days_difference=$((time_progression / 86400)); echo $Days_difference Days"
+    },
+    {
+      "type": "kernel",
+      "key": "│ Kernel",
+      "keyColor": "38;2;0;215;135"
+    },
+    {
+      "type": "packages",
+      "format": "{} (packages installed)",
+      "key": "│ Packages",
+      "keyColor": "38;2;0;215;135"
+    },
+    {
+      "type": "shell",
+      "key": "│ Shell",
+      "keyColor": "38;2;0;215;135"
+    },
+    {
+      "type": "custom",
+      "format": "╰────────────────────────",
+      "outputColor": "38;2;95;135;135"
+    },
+
+    {
+      "type": "custom",
+      "format": "╭─── SOFTWARE",
+      "outputColor": "38;2;95;135;135"
+    },
+    {
+      "type": "wm",
+      "key": "│ WM",
+      "keyColor": "38;2;224;107;116"
+    },
+    {
+      "type": "wmtheme",
+      "key": "│ WM Theme",
+      "keyColor": "38;2;224;107;116"
+    },
+    {
+      "type": "icons",
+      "key": "│ Icons",
+      "keyColor": "38;2;224;107;116"
+    },
+    {
+      "type": "cursor",
+      "key": "│ Cursor",
+      "keyColor": "38;2;224;107;116"
+    },
+    {
+      "type": "terminal",
+      "key": "│ Terminal",
+      "keyColor": "38;2;224;107;116"
+    },
+    {
+      "type": "terminalfont",
+      "key": "│ Font",
+      "keyColor": "38;2;224;107;116"
+    },
+    {
+      "type": "custom",
+      "format": "╰────────────────────────",
+      "outputColor": "38;2;95;135;135"
+    },
+
+    {
+      "type": "custom",
+      "format": "╭─── HARDWARE",
+      "outputColor": "38;2;95;135;135"
+    },
+    {
+      "type": "host",
+      "format": "{5} {1} Type {2}",
+      "key": "│ Host",
+      "keyColor": "38;2;95;135;255"
+    },
+    {
+      "type": "display",
+      "key": "│ Display",
+      "keyColor": "38;2;95;135;255"
+    },
+    {
+      "type": "cpu",
+      "key": "│ CPU",
+      "keyColor": "38;2;95;135;255",
+      "showPeCoreCount": true,
+      "temp": true,
+      "format": "{name} C:{core-types} {freq-max}"
+    },
+    {
+      "type": "gpu",
+      "key": "│ GPU",
+      "keyColor": "38;2;95;135;255",
+      "detectionMethod": "auto",
+      "driverSpecific": true,
+      "format": "{name} C:{core-count}{?frequency} {frequency}{?}"
+    },
+    {
+      "type": "memory",
+      "key": "│ Memory",
+      "keyColor": "38;2;95;135;255",
+      "percent": {
+        "type": 2,
+        "green": 30,
+        "yellow": 70,
+        "red": 90
+      }
+    },
+    {
+      "type": "disk",
+      "key": "│ Disk",
+      "keyColor": "38;2;95;135;255",
+      "percent": {
+        "type": 3,
+        "green": 30,
+        "yellow": 70,
+        "red": 90
+      }
+    },
+    {
+      "type": "swap",
+      "key": "│ Swap",
+      "keyColor": "38;2;95;135;255",
+      "percent": {
+        "type": 3,
+        "green": 30,
+        "yellow": 70,
+        "red": 90
+      }
+    },
+    {
+      "type": "custom",
+      "format": "╰────────────────────────",
+      "outputColor": "38;2;95;135;135"
+    },
+
+    {
+      "type": "custom",
+      "format": "╭─── INFORMATION",
+      "outputColor": "38;2;95;135;135"
+    },
+    {
+      "type": "media",
+      "key": "│ Media",
+      "keyColor": "38;2;0;175;95"
+    },
+    {
+      "type": "player",
+      "key": "│ Player",
+      "keyColor": "38;2;0;175;95"
+    },
+    {
+      "type": "uptime",
+      "key": "│ Uptime",
+      "keyColor": "38;2;0;175;95"
+    },
+    {
+      "type": "datetime",
+      "key": "│ DateTime",
+      "keyColor": "38;2;0;175;95",
+      "format": "{year}-{month-pretty}-{day-in-month} {hour-pretty}:{minute-pretty}:{second-pretty} [{weekday}] [Week:{week}]"
+    },
+    {
+      "type": "localip",
+      "key": "│ Local IP",
+      "keyColor": "38;2;0;175;95",
+      "showIpv4": true,
+      "compact": false,
+      "showPrefixLen": true,
+      "defaultRouteOnly": true,
+      "format": "{ipv4} ({ifname})"
+    },
+    {
+      "type": "publicip",
+      "key": "│ Public IP",
+      "keyColor": "38;2;0;175;95",
+      "showIpv4": true,
+      "compact": false,
+      "showPrefixLen": true,
+      "defaultRouteOnly": true
+    },
+    {
+      "type": "custom",
+      "format": "╰────────────────────────",
+      "outputColor": "38;2;95;135;135"
+    }
+  ]
+}
