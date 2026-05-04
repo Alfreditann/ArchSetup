@@ -22,6 +22,9 @@
         "format": "{:%H:%M:%S} ",
         "tooltip-format":"{:%Y-%m-%d}"
     },
+    "tray": {
+        "spacing": 8
+    },
     "hyprland/workspaces": {
         "format": "{name}"
     },

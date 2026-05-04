@@ -1,14 +1,14 @@
 /* ===============================
-    RED AND BLUE WAYBAR THEME
-    (NO COLOR VARIABLES)
-    =============================== */
+   BRIGHT PURPLE WAYBAR THEME
+   =============================== */
 
 * {
     border: none;
-    border-radius: 0px;
+    border-radius: 0;
 
-    font-family: "Adwaita Sans", "GeistMonoNerd Nerd Font Propo", "sans-serif";
+    font-family: "JetBrainsMono Nerd Font", "GeistMonoNerd Nerd Font Propo", "sans-serif";
     font-weight: bold;
+    font-size: 13px;
 
     min-height: 0;
     padding: 0;
@@ -23,57 +23,56 @@ window#waybar {
    TOOLTIPS
    =============================== */
 tooltip {
-    background: #050b14;
-    border: 2px solid #7c3aed;
+    background: rgba(70, 50, 145, 0.95);
     border-radius: 12px;
 }
 
 tooltip label {
-    color: #8fb3ff;
-    padding: 6px;
+    color: #e6dcff;
+    padding: 8px 12px;
 }
 
 /* ===============================
    WORKSPACES
    =============================== */
 #workspaces {
-    background-color: #050b14;
-    padding: 5px 3px;
+    background-color: rgba(70, 50, 145, 0.82);
+    padding: 6px 4px;
     margin: 0 0 0 12px;
-    border-radius: 18px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(122, 92, 255, 0.2);
 }
 
 #workspaces button {
-    padding: 0px 6px;
-    margin: 0px 3px;
-    border-radius: 50px;
-
-    background-color: #0c1f3d;
-    color: #8fb3ff;
-
-    transition: all 0.3s ease-in-out;
+    padding: 7px 12px;
+    margin: 0 4px;
+    border-radius: 12px;
+    background-color: #5a3ec8;
+    color: #e6dcff;
+    transition: all 0.2s ease;
 }
 
 #workspaces button.active {
-    background: linear-gradient(90deg, #1f4f8f 0%, #7c3aed 100%);
-    color: #eef4ff;
+    background-color: #7a5cff;
+    color: #f7f3ff;
     min-width: 50px;
     font-size: 13px;
+    box-shadow: 0 0 8px rgba(122, 92, 255, 0.35);
 }
 
 #workspaces button:hover {
-    background-color: #d62828;
-    color: #eef4ff;
-    border-radius: 16px;
+    background-color: #7a5cff;
+    color: #f7f3ff;
+    border-radius: 12px;
     min-width: 50px;
 }
 
 #workspaces button.urgent {
-    background-color: #ff4d4d;
-    color: #050b14;
-    border-radius: 16px;
+    background-color: #7a5cff;
+    color: #f7f3ff;
+    border-radius: 12px;
     min-width: 50px;
-    animation: pulse 1.2s infinite ease-in-out;
+    animation: pulse 1.2s infinite ease;
 }
 
 /* ===============================
@@ -86,46 +85,46 @@ tooltip label {
 #pulseaudio,
 #network,
 #clock,
+#tray,
 #custom-notification {
-    background-color: #050b14;
-    padding: 0 15px;
-    margin: 0 5px;
-    border-radius: 50px;
-    color: #8fb3ff;
+    background-color: rgba(70, 50, 145, 0.84);
+    padding: 8px 12px;
+    margin: 0 6px;
+    border-radius: 12px;
+    color: #e6dcff;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 #clock {
-    margin: 0 5px 0 10px;
+    margin: 0 6px 0 10px;
+    color: #f7f3ff;
 }
 
 #custom-notification {
-    margin: 0 10px 0 5px;
-    color: #ff4d4d;
+    margin: 0 10px 0 6px;
+    color: #f7f3ff;
 }
 
-/* ===============================
-   VOLUME MODULE
-   =============================== */
-#custom-volume {
-    background-color: #050b14;  /* match other modules */
-    color: #8fb3ff;
-    padding: 0 15px;
-    margin: 0 5px;
-    border-radius: 50px;
-    font-weight: bold;
+#pulseaudio:hover,
+#network:hover,
+#custom-memory:hover,
+#temperature:hover,
+#battery:hover,
+#clock:hover,
+#tray:hover,
+#custom-notification:hover {
+    background-color: #7a5cff;
+    color: #f7f3ff;
 }
 
-/* ===============================
-   URGENT ANIMATION
-   =============================== */
 @keyframes pulse {
     0% {
-        background-color: #d62828;
+        background-color: #5a3ec8;
     }
     50% {
-        background-color: #2a6fdb;
+        background-color: #7a5cff;
     }
     100% {
-        background-color: #d62828;
+        background-color: #5a3ec8;
     }
 }
